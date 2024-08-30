@@ -1,0 +1,17 @@
+@font-face {
+    font-family: harry potter;
+    src: url("fuentes/HARRYP__.TTF");
+}
+
+body {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.letras {
+    font-family: harry potter;
+    font-size: 20rem;
+    height: 30rem;
+    width: 100%;
+}

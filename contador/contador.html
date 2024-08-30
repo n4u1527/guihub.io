@@ -1,0 +1,29 @@
+<head>
+    <title>contador</title>
+    <link rel="stylesheet" href="contador.css">
+    <script src="contador.js"></script>
+    <link href="fondo.png">
+</head>
+
+<body style="background-image:url(fondo.png);">
+    <div>
+        <p class="letras"> tendras que esperar un poco</p>
+    </div>
+    <div class="contador">
+        <pre id="contador"><code></code></pre>
+        <script>
+            fetch("contador.js")
+                .then(response => response.text())
+                .then(text => {
+                    // Escapar caracteres HTML especiales
+                    document.getElementById("contador").innerHTML =
+                        `${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos`;
+                })
+                .catch(error => {
+                    console.error('Error al cargar el archivo:', error);
+                });
+        </script>
+    </div>
+</body>
+
+</html>
